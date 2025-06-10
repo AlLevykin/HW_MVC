@@ -30,8 +30,13 @@ public class PostController {
     return service.save(post);
   }
 
+  @PostMapping("/{id}")
+  public Post edit(@RequestBody Post post) {
+    return service.save(post);
+  }
+
   @DeleteMapping("/{id}")
-  public void removeById(long id) {
+  public void removeById(@PathVariable long id) {
     service.removeById(id);
   }
 }
